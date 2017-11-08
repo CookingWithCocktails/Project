@@ -3,27 +3,44 @@
     "Cocktails" : {
       "Bloody Mary" : {
         "Ingredients" : {
-			"Lemon Wedge" : "1 Lemon Wedge",
-			"Lime Wedge" : "1 Lime Wedge",
-			"Vodka" : "60ml Vodka",
-			"Tomato Juice" : "120ml Tomato Juice",
-			"Tabasco Sauce" : "2 Dashes Tabasco Sauce",
-			"Horseradish" : "2tsp Horseradish",
-			"Worcestershire Sauce" : "2 Dashes Worcestershire Sauce",
-			"Celery Salt" : "1 pinch celery salt",
-			"Black Pepper" : "1 pinch black pepper",
-			"Paprika" : "1 pinch paprika"
-		},
-		"Mixing Method" : {
-			"1 " : "Pour celery salt on a small plate",
-			"2 " : "Rub juicy side of lemon or lime wedge along the lip of a glass",
-			"3 " : "Roll the outer edge of the glass in the celery salt until fully coated",
-			"4 " : "Fill with ice and set aside",
-			"5 " : "Squeeze lemon and lime wedge into shaker and drop them in",
-			"6 " : "Add remaining ingredients and fill with ice",
-			"7 " : "Shake gently and strain into the prepared glass",
-			"8 " : "Garnish with lime wedge"
-		}
+          "Black Pepper" : "1 pinch black pepper",
+          "Celery Salt" : "1 pinch celery salt",
+          "Horseradish" : "2tsp Horseradish",
+          "Lemon Wedge" : "1 Lemon Wedge",
+          "Lime Wedge" : "1 Lime Wedge",
+          "Paprika" : "1 pinch paprika",
+          "Tabasco Sauce" : "2 Dashes Tabasco Sauce",
+          "Tomato Juice" : "120ml Tomato Juice",
+          "Vodka" : "60ml Vodka",
+          "Worcestershire Sauce" : "2 Dashes Worcestershire Sauce"
+        },
+        "Mixing Method" : {
+          "1 " : "Pour celery salt on a small plate",
+          "2 " : "Rub juicy side of lemon or lime wedge along the lip of a glass",
+          "3 " : "Roll the outer edge of the glass in the celery salt until fully coated",
+          "4 " : "Fill with ice and set aside",
+          "5 " : "Squeeze lemon and lime wedge into shaker and drop them in",
+          "6 " : "Add remaining ingredients and fill with ice",
+          "7 " : "Shake gently and strain into the prepared glass",
+          "8 " : "Garnish with lime wedge"
+        }
+      },
+      "Pina Colada" : {
+        "Ingredients" : {
+          "Coconut Cream" : "60ml Coconut Cream",
+          "Dark Rum" : "30ml Dark Rum",
+          "Frozen Pineapple" : "1/2 Cup Of Diced Frozen Pineapple",
+          "Ice" : "1 and 1/2 cups Ice",
+          "Little Umbrella" : "Little Umbrella",
+          "Pineapple Juice" : "60ml Pineapple Juice",
+          "Pineapple Slices" : "Pineapple Slices",
+          "White Rum" : "45ml White Rum"
+        },
+        "Mixing Method" : {
+          "1 " : "Put the ice, frozen pineapple, juice, coconut cream, and the white and dark rums into a blender",
+          "2 " : "Blend until smooth and frosty",
+          "3 " : "Pour the drink into 2 glasses and garnish the rim with pineapple slices and a little umbrella"
+        }
       }
     },
     "Food recipes " : {
