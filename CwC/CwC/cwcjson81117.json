@@ -1,0 +1,53 @@
+{
+  "Recipes" : {
+    "Cocktails" : {
+      "Bloody Mary" : {
+        "Ingredients" : {
+          "Black Pepper" : "1 pinch black pepper",
+          "Celery Salt" : "1 pinch celery salt",
+          "Horseradish" : "2tsp Horseradish",
+          "Lemon Wedge" : "1 Lemon Wedge",
+          "Lime Wedge" : "1 Lime Wedge",
+          "Paprika" : "1 pinch paprika",
+          "Tabasco Sauce" : "2 Dashes Tabasco Sauce",
+          "Tomato Juice" : "120ml Tomato Juice",
+          "Vodka" : "60ml Vodka",
+          "Worcestershire Sauce" : "2 Dashes Worcestershire Sauce"
+        },
+        "Mixing Method" : [ null, "Pour celery salt on a small plate", "Rub juicy side of lemon or lime wedge along the lip of a glass", "Roll the outer edge of the glass in the celery salt until fully coated", "Fill with ice and set aside", "Squeeze lemon and lime wedge into shaker and drop them in", "Add remaining ingredients and fill with ice", "Shake gently and strain into the prepared glass", "Garnish with lime wedge" ]
+      }
+    },
+    "Food recipes " : {
+      "Chicken curry" : {
+        "Cooking method" : {
+          "1" : "Slice vegetables and garlic",
+          "2" : "Heat the oil in a frying pan and gently fry the onions, carrot and garlic",
+          "4" : "Add curry powder and flour to the pan and cook for 1 minute stirring all the time",
+          "3 " : "Add mushrooms and pepper to the frying pan and cook for 2 to 3 minutes",
+          "5 " : "Stir in the stock and cooked chicken pieces",
+          "6 " : "Add the defrosted peas, reduce heat and cook slowly for 10 minutes without stirring"
+        },
+        "Ingredients" : {
+          "Button Mushrooms" : "5 pcs",
+          "Chicken stock cube " : "1 pc, dissolved in 275 ml of hot water",
+          "Cooked chicken" : "350g",
+          "Garlic " : "1 clove",
+          "Large Carrot " : "1 pc",
+          "Medium Garlic Powder" : "2 tsp",
+          "Medium onion" : "1 pc",
+          "Medium pepper" : "1 pc",
+          "Peas " : "100g",
+          "Plain flour" : "1 tsp",
+          "Vegetable oil" : "1 tsp"
+        }
+      }
+    }
+  },
+  "users" : {
+    "BHOFOFbTqGcnTnaUHUVPqbDmQri1" : {
+      "email" : "abc123@gmail.om",
+      "fname" : "alex",
+      "sname" : "asdasda"
+    }
+  }
+}
