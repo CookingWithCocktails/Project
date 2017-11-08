@@ -23,6 +23,8 @@ firebase.auth().createUserWithEmailAndPassword(email, password)
     });   
     });
 }
+
+
  function login(){
      var email = document.getElementById("logemail").value;
      var password = document.getElementById("logpw").value;    
@@ -40,14 +42,40 @@ firebase.auth().createUserWithEmailAndPassword(email, password)
      
  }
 
+//$( document ).ready(function() {
+//	var count = 1;
+//    var query = firebase.database().ref("Test1/Chicken curry/Cooking method").orderByKey();
+//     query.once("value").then(function(snapshot) {
+//     snapshot.forEach(function(childSnapshot) {
+//      var key = childSnapshot.key;
+//      var childData = childSnapshot.val();
+//        console.log(childData);
+//        document.getElementById("test123").innerHTML += count + ")" + " " + childData + ". <br>";
+//		count++;
+//  });
+//         
+//});
+//});
+
 $( document ).ready(function() {
-    var query = firebase.database().ref("Recipies/Tomato Cod").orderByKey();
+	function boldString(str, find){
+    var re = new RegExp(find, 'g');
+    return str.replace(re, '<b>'+find+'</b>');
+}
+    var query = firebase.database().ref("Test1").orderByKey();
      query.once("value").then(function(snapshot) {
      snapshot.forEach(function(childSnapshot) {
       var key = childSnapshot.key;
       var childData = childSnapshot.val();
         console.log(childData);
-        document.getElementById("test123").innerHTML = childData;
+		str = JSON.stringify(childData, null, 4);
+		var str2 = str.replace(/,/g, "<br>")
+		var str3 = str2.replace(/"/g, " ")
+		var str4 = str3.replace(/}/g, " ")
+		var str5 = str4.replace(/{/g, " ")
+		var str6 = boldString(str5,"Cooking method");
+		var str7 = boldString(str6,"Ingredients")
+        document.getElementById("test123").innerHTML += " " + str7 + ". <br>" + " ";
   });
          
 });
