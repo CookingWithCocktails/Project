@@ -1,0 +1,21 @@
+
+.buto{
+    background-color: coral;
+    color: white;
+}
+
+.nav-tabs > li > a {
+  color: #575757;
+}
+.nav-tabs > li.active > a {
+  color: #3c5a78;
+  font-size: 16px;
+}
+
+.c1{
+    height:50rem;
+}
+
+.bla{
+  float: left;
+}
