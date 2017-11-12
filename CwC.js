@@ -31,6 +31,28 @@ window.onload = function() {
     });
 }; 
 
+function SubmitRecipe(){
+    var user = firebase.auth().currentUser;
+    var author = user.displayName;
+    var title = $("#RecipeName").val();
+    var method = $("#IngredientsInput").val();
+    var ingredients = $("#MethodInput").val();
+    var entryType = $("#SelectRecipeType").val();
+
+    var RecipeData = {
+      author: author,
+      title: title,
+      method: method,
+      ingredients: ingredients
+    };
+  console.log(RecipeData);
+  console.log(entryType);
+
+    //var newPostKey = firebase.database().ref().child('stream').push().key;
+   // firebase.database().ref('/stream/' + newPostKey).set(RecipeData);
+
+}
+
 //to pull stuff from the database
 $( document ).ready(function() {
     function boldString(str, find){

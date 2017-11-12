@@ -10,7 +10,7 @@
 </header>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light" style="background-color:#483D8B">
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:rgb(39, 32, 92)">
         <a data-toggle="tab" class="navbar-brand" id="home-tab" data-toggle="tab" href="#home" role="tab" aria-controls="home">CwC</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
             aria-expanded="false" aria-label="Toggle navigation">
@@ -36,7 +36,7 @@
             </ul>
 
             <ul class="navbar-nav nav">
-                <li class="nav-item dropdown" id="bla">
+                <li class="nav-item dropdown">
                     <a class="nav-link dropdown-toggle" id="acc" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">My Account</a>
                     <div class="dropdown-menu" id="accountDropdown">
                         <div id="firebaseui-auth-container"></div>
@@ -134,111 +134,34 @@
             <div class="jumbotron text-center">
                 <h1>Share your secret!?</h1>
             </div>
-        </div>
-    </div>
-    <!-- <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <h1 class="text-center">Sign Up!!</h1>
-                    <form class="container" id="needs-validation" novalidate>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="validationCustom01">First name</label>
-                                    <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Jane" required> </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="validationCustom02">Last name</label>
-                                    <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Doe" required> </div>
-                            </div>
-                            <div class="row">
-                                <div class="col-md-6 mb-3">
-                                    <label for="validationCustom03">Email</label>
-                                    <input type="text" class="form-control" id="validationCustom03" placeholder="Email" value="example@example.com" required>
-                                    <div class="invalid-feedback"> Please provide a valid email. </div>
-                                </div>
-                                <div class="col-md-6 mb-3">
-                                    <label for="inputPassword6">Password</label>
-                                    <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-                                    <small id="passwordHelpInline" class="text-muted">Must be 8-20 characters long.</small>
-                                </div>
-                            </div>
-                            <div class="row">
-                                <button class="btn btn-secondary mx-auto" type="submit">Sign Up!</button>
-                            </div>
-                        </form>
-            </div>
-        </div>
-    </div>
-
-    <div class="modal fade bd-example-modal-lg" tabindex="-1" role="dialog" aria-labelledby="myLargeModalLabel" aria-hidden="true">
-        <div class="modal-dialog modal-lg">
-            <div class="modal-content">
-                <div class="container p-3">
-                    <ul class="nav nav-tabs nav-justified">
-                        <li class="nav-item">
-                            <a class="nav-link active" data-toggle="pill" href="#login">Login</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" data-toggle="pill" href="#signup">Sign Up</a>
-                        </li>
-                    </ul>
-
-                    <div class="tab-content">
-                        <div id="login" class="tab-pane fade show active">
-                            <form class="container" id="needs-validation1" novalidate>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="inlineFormInputEmail">Email</label>
-                                        <input type="text" class="form-control" id="inlineFormInputName"> </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="inputPassword6">Password</label>
-                                        <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline"> </div>
-                                </div>
-
-                                <div class="row">
-                                    <div class="col-auto">
-                                        <div class="form-check mb-2 mb-sm-0">
-                                            <label class="form-check-label ">
-                                                <input class="form-check-input mx-auto" type="checkbox"> Remember me </label>
-                                        </div>
-                                    </div>
-                                    <div class="col-auto">
-                                        <button type="submit" class="btn btn-secondary mx-auto">Login</button>
-                                    </div>
-                                </div>
-                            </form>
-                        </div>
-                        <div id="signup" class="tab-pane fade">
-                            <form class="container" id="needs-validation" novalidate>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="validationCustom01">First name</label>
-                                        <input type="text" class="form-control" id="validationCustom01" placeholder="First name" value="Jane" required> </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="validationCustom02">Last name</label>
-                                        <input type="text" class="form-control" id="validationCustom02" placeholder="Last name" value="Doe" required> </div>
-                                </div>
-                                <div class="row">
-                                    <div class="col-md-6 mb-3">
-                                        <label for="validationCustom03">Email</label>
-                                        <input type="text" class="form-control" id="validationCustom03" placeholder="Email" value="example@example.com" required>
-                                        <div class="invalid-feedback"> Please provide a valid email. </div>
-                                    </div>
-                                    <div class="col-md-6 mb-3">
-                                        <label for="inputPassword6">Password</label>
-                                        <input type="password" id="inputPassword6" class="form-control" aria-describedby="passwordHelpInline">
-                                        <small id="passwordHelpInline" class="text-muted">Must be 8-20 characters long.</small>
-                                    </div>
-                                </div>
-                                <div class="row">
-                                    <button class="btn btn-secondary mx-auto" type="submit">Sign Up!</button>
-                                </div>
-                            </form>
-                        </div>
+            <div class="container">
+                <form>
+                    <div class="form-group">
+                        <label for="SelectRecipeType">Choose recipe type:</label>
+                        <select class="form-control" id="SelectRecipeType">
+                            <option>Food</option>
+                            <option>Drink</option>
+                        </select>
                     </div>
-                </div>
+                    <div class="form-group">
+                        <label for="RecipeName">Title</label>
+                        <input type="text" class="form-control" id="RecipeName" placeholder="Recipe Name">
+                    </div>
+                    <div class="form-group">
+                        <label for="IngrediantsInput">Ingredients</label>
+                        <textarea class="form-control" id="IngrediantsInput" rows="3"></textarea>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="MethodInput">Method</label>
+                        <textarea class="form-control" id="MethodInput" rows="3"></textarea>
+                    </div>
+                    <button id="SubmitRecipe" type="submit" onclick="SubmitRecipe()" class="btn btn-secondary">Submit!!!</button>
+                </form>
             </div>
         </div>
-    </div> -->
+    </div>
+
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
