@@ -113,9 +113,14 @@
             <div class="jumbotron text-center">
                 <h1>What's for Dinner?? </h1>
             </div>
-            <div class="card-columns" id="frecipes">
+            <div class="container">
+                <div id="accordion" role="tablist" id="frecipes">
+                </div>
+                <!-- <div class="card-columns" id="frecipes"> -->
+                <!--</div> -->
             </div>
         </div>
+
 
         <div class="tab-pane fade" id="student" role="tabpanel" aria-labelledby="student-tab">
             <div class="jumbotron text-center">
@@ -135,7 +140,7 @@
                 <h1>Share your secret!?</h1>
             </div>
             <div class="container">
-                <form>
+                <form id = "Recipe-submit-form" onsubmit="return SubmitRecipe();">
                     <div class="form-group">
                         <label for="SelectRecipeType">Choose recipe type:</label>
                         <select class="form-control" id="SelectRecipeType">
@@ -144,19 +149,26 @@
                         </select>
                     </div>
                     <div class="form-group">
+                        <label for="StudentSuitable">Student friendly?</label>
+                        <select class="form-control" id="StudentSuitable">
+                            <option>Yes</option>
+                            <option>No</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
                         <label for="RecipeName">Title</label>
                         <input type="text" class="form-control" id="RecipeName" placeholder="Recipe Name">
                     </div>
                     <div class="form-group">
-                        <label for="IngrediantsInput">Ingredients</label>
-                        <textarea class="form-control" id="IngrediantsInput" rows="3"></textarea>
+                        <label for="IngredientsInput">Ingredients</label>
+                        <textarea class="form-control" id="IngredientsInput" rows="3"></textarea>
                     </div>
 
                     <div class="form-group">
                         <label for="MethodInput">Method</label>
                         <textarea class="form-control" id="MethodInput" rows="3"></textarea>
                     </div>
-                    <button id="SubmitRecipe" type="submit" onclick="SubmitRecipe()" class="btn btn-secondary">Submit!!!</button>
+                    <button id="EnterRecipe" type="submit" class="btn btn-secondary">Submit!!!</button>
                 </form>
             </div>
         </div>

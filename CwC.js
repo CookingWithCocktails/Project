@@ -35,8 +35,9 @@ function SubmitRecipe(){
     var user = firebase.auth().currentUser;
     var author = user.displayName;
     var title = $("#RecipeName").val();
-    var method = $("#IngredientsInput").val();
-    var ingredients = $("#MethodInput").val();
+    var sFriendly = $("#StudentSuitable").val();
+    var method = $("#MethodInput").val();
+    var ingredients = $("#IngredientsInput").val();
     var entryType = $("#SelectRecipeType").val();
 
     var RecipeData = {
@@ -45,16 +46,20 @@ function SubmitRecipe(){
       method: method,
       ingredients: ingredients
     };
+    
   console.log(RecipeData);
   console.log(entryType);
-
+  console.log(sFriendly);
+  
+  return false;
     //var newPostKey = firebase.database().ref().child('stream').push().key;
    // firebase.database().ref('/stream/' + newPostKey).set(RecipeData);
-
 }
 
+
+
 //to pull stuff from the database
-$( document ).ready(function() {
+/*$( document ).ready(function() {
     function boldString(str, find){
     var re = new RegExp(find, 'g');
     return str.replace(re, '<b>'+find+'</b>');
@@ -75,10 +80,10 @@ $( document ).ready(function() {
             document.getElementById("test123").innerHTML += " " + str7 + ". <br>" + " ";
         });
     });
-});
+});*/
 
 //dbfunc
-let sampleDB=[];
+/*let sampleDB=[];
 let entry = {
     title: "testing",
     content: "hmm",
@@ -127,4 +132,30 @@ sampleDB.push(entry);
 //render func -> pass id and data from db
 for(sampleEntry in sampleDB){
     $('#frecipes').append(`<div class="card"> <img class="card-img-top" src="${sampleDB[sampleEntry].img_url}" alt="Card image cap"><div class="card-body"><h4 class="card-title">${sampleDB[sampleEntry].title}</h4><p class="card-text">${sampleDB[sampleEntry].content}</p><button class="btn buto">${sampleDB[sampleEntry].button_txt}</button></div></div> `);   
+} */
+
+let sampleDB = [];
+entry = {
+    title: "Spagetti Bolognaise",
+    contentI: "Ingredients: boop boop",
+    contentM: "Do all the steps"
+};
+sampleDB.push(entry);
+entry = {
+    title: "Curry",
+    contentI: "Ingredients: boop boop",
+    contentM: "Do all the steps"
+};
+sampleDB.push(entry);
+
+entry = {
+    title: "Fried Rice",
+    contentI: "Ingredients: boop boop",
+    contentM: "Do all the steps"
+};
+sampleDB.push(entry);
+
+
+for(sampleEntry in sampleDB){
+    $('#frecipes').append('<div class="card"> <div class="card-header" role="tab" ><h5 class="mb-0"><a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">${sampleDB[sampleEntry].title}</a></h5></div><div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion"><div class="card-body">${sampleDB[sampleEntry].contentI}${sampleDB[sampleEntry].contentM}</div></div></div>'); 
 }
