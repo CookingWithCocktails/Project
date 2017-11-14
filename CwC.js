@@ -155,7 +155,28 @@ entry = {
 };
 sampleDB.push(entry);
 
-
-for(sampleEntry in sampleDB){
-    $('#frecipes').append('<div class="card"> <div class="card-header" role="tab" ><h5 class="mb-0"><a data-toggle="collapse" href="#collapseOne" aria-expanded="true" aria-controls="collapseOne">${sampleDB[sampleEntry].title}</a></h5></div><div id="collapseOne" class="collapse show" role="tabpanel" aria-labelledby="headingOne" data-parent="#accordion"><div class="card-body">${sampleDB[sampleEntry].contentI}${sampleDB[sampleEntry].contentM}</div></div></div>'); 
+//Function for pulling info into accordian
+function displayDB() {
+    var index = 0;
+    for (sampleEntry in sampleDB) {
+        $('#accordion').append(
+            `<div class="card">
+                <div class="card-header" role="tab" id="heading${index}">
+                    <h5 class="mb-0">
+                        <a data-toggle="collapse" href="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
+                            ${sampleDB[sampleEntry].title}
+                        </a>
+                    </h5>
+                </div>
+                <div id="collapse${index}" class="collapse" role="tabpanel" aria-labelledby="heading${index}" data-parent="#accordion">
+                    <div class="card-body">
+                        ${sampleDB[sampleEntry].contentI}<br />
+                        ${sampleDB[sampleEntry].contentM}
+                    </div>
+                </div>
+            </div>`
+        );
+        index += 1;
+    }
 }
+displayDB()
