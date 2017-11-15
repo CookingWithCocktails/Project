@@ -1,6 +1,24 @@
 {
   "Recipes" : {
     "Cocktails" : {
+      "-KywoDE4liN9XDQ2x9nl" : {
+        "author" : "Alexandru Cumpanici",
+        "ingredients" : "you're an alcoholic",
+        "method" : "just drink it",
+        "title" : "this is drink"
+      },
+      "-Kyx23k0xTuIUMR5S1Ie" : {
+        "author" : "Alexandru Cumpanici",
+        "ingredients" : "pour it in the glass at a 45 degrees angle",
+        "method" : "don't mix it",
+        "title" : "beer"
+      },
+      "-KyzQMVMxI_H-ttO4akE" : {
+        "author" : "Alexandru Cumpanici",
+        "ingredients" : "grapes",
+        "method" : "blend them in the blender",
+        "title" : "grapes juice"
+      },
       "Bloody Mary" : {
         "Ingredients" : {
           "Black Pepper" : "1 pinch black pepper",
@@ -150,6 +168,24 @@
       }
     },
     "Food recipes " : {
+      "-Kywo5tCTQQ_nmQ7RvFD" : {
+        "author" : "Alexandru Cumpanici",
+        "ingredients" : "very foody",
+        "method" : "just eat it",
+        "title" : "this is food"
+      },
+      "-Kyx6eFOyshtVbP3XgdX" : {
+        "author" : "Alexandru Cumpanici",
+        "ingredients" : "asdas",
+        "method" : "asdas",
+        "title" : "asd"
+      },
+      "-KyzQEOb_wrWitbVo6cT" : {
+        "author" : "Alexandru Cumpanici",
+        "ingredients" : "not very fresh grapes",
+        "method" : "blend them in a microwave",
+        "title" : "fresh grapes"
+      },
       "Chicken curry" : {
         "Cooking method" : {
           "1 " : "Slice vegetables and garlic",
@@ -173,13 +209,6 @@
           "Vegetable oil" : "1 tsp"
         }
       }
-    }
-  },
-  "users" : {
-    "Ur6743QugYd70NZgiDgwDKn1To62" : {
-      "email" : "helloalex123@gmail.com",
-      "fname" : "hellothere",
-      "sname" : "alex"
     }
   }
 }
