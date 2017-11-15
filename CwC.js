@@ -72,39 +72,81 @@ function SubmitRecipe(){
       alert("Success!");
     }
 }
-function displayDB() {
-  var database=firebase.database();
-    var index = 0;
-      var ref=database.ref('Recipes/Cocktails');
-
+function displayFood() {
+      var database=firebase.database();
+      var index = 0;
+      var ref=database.ref('Recipes/Food recipes /');
+      //pull food from the db
       ref.once("value")
         .then(function(snapshot) {
-          console.log(snapshot.val());
-        var ingredients = snapshot.child("ingredients").val();
-        var method = snapshot.child("method").val();
-        var title = snapshot.child("title").val();
 
-        $('#accordion').append(
-            `<div class="card">
-                <div class="card-header" role="tab" id="heading${index}">
-                    <h5 class="mb-0">
-                        <a data-toggle="collapse" href="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
-                              ${title}
-                        </a>
-                    </h5>
-                </div>
-                <div id="collapse${index}" class="collapse" role="tabpanel" aria-labelledby="heading${index}" data-parent="#accordion">
-                    <div class="card-body">
-                      Ingredients:
-                      ${ingredients}<br>
-                      Mixing method:
-                      ${method}
-                    </div>
-                </div>
-            </div>`
-        );
-        index += 1;
+          ref.once("value", function(snapshot) {
+            snapshot.forEach(function(child) {
+              var ingredients = child.val().ingredients;
+              var method = child.val().method;
+              var title = child.val().title;;
+
+              $('#accordion').append(
+                  `<div class="card">
+                      <div class="card-header" role="tab" id="heading${index}">
+                          <h5 class="mb-0">
+                              <a data-toggle="collapse" href="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
+                                    ${title}
+                              </a>
+                          </h5>
+                      </div>
+                      <div id="collapse${index}" class="collapse" role="tabpanel" aria-labelledby="heading${index}" data-parent="#accordion">
+                          <div class="card-body">
+                            Ingredients:
+                            ${ingredients}<br>
+                            Cooking method:
+                            ${method}
+                          </div>
+                      </div>
+                  </div>`
+              );
+              index += 1;
+            });
+          });
       });
     }
 
-displayDB()
+    function displayCocktails() {
+          var database=firebase.database();
+          var index2 = 0;
+          var ref=database.ref('Recipes/Cocktails');
+          //pull food from the db
+          ref.once("value")
+            .then(function(snapshot) {
+              ref.once("value", function(snapshot) {
+                snapshot.forEach(function(child) {
+                  var ingredients = child.val().ingredients;
+                  var method = child.val().method;
+                  var title = child.val().title;;
+                  console.log(ingredients);
+                  $('#cRecipes').append(
+                      `<div class="card">
+                          <div class="card-header" role="tab" id="heading${index2}">
+                              <h5 class="mb-0">
+                                  <a data-toggle="collapse" href="#collapse${index2}" aria-expanded="true" aria-controls="collapse${index2}">
+                                        ${title}
+                                  </a>
+                              </h5>
+                          </div>
+                          <div id="collapse${index2}" class="collapse" role="tabpanel" aria-labelledby="heading${index2}" data-parent="#cRecipes">
+                              <div class="card-body">
+                                Ingredients:
+                                ${ingredients}<br>
+                                Mixing method:
+                                ${method}
+                              </div>
+                          </div>
+                      </div>`
+                  );
+                  index2 += 1;
+                });
+              });
+          });
+        }
+displayCocktails()
+displayFood()
