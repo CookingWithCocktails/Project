@@ -1,4 +1,3 @@
-
 var config = {
     apiKey: "AIzaSyC-GPyE5zrbTHM8VtE1B5EIUsvbYIt9IxY",
     authDomain: "cwc-2017.firebaseapp.com",
@@ -78,6 +77,7 @@ function displayDB() {
       var index2 = 0;
       var ref=database.ref('Recipes/Food recipes /');
       var ref2=database.ref('Recipes/Cocktails/');
+	  var ref3=database.ref('Recipes/Food recipes /');
       //pull food from the db
       ref.once("value")
         .then(function(snapshot) {
@@ -92,7 +92,6 @@ function displayDB() {
                         <div class="card-header" role="tab" id="heading${index}">
                             <h5 class="mb-0">
                                 <a data-toggle="collapse" href="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
-
                                       ${title}
                                 </a>
                             </h5>
@@ -144,6 +143,40 @@ function displayDB() {
                 });
               });
           });
+		  ref3.once("value")
+        .then(function(snapshot) {
+          ref3.once("value", function(snapshot) {
+            snapshot.forEach(function(child) {
+			var student = child.val().student;	
+              var ingredients = child.val().ingredients;
+              var method = child.val().method;
+              var title = child.val().title;
+			  
+			  if(student=="Yes"){
+                $('#accordion3').append(
+                    `<div class="card">
+                        <div class="card-header" role="tab" id="heading${index}">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" href="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
+                                      ${title}
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapse${index}" class="collapse" role="tabpanel" aria-labelledby="heading${index}" data-parent="#accordion">
+                            <div class="card-body">
+                              <strong>Ingredients: </strong>
+                              ${ingredients}<br>
+                                <strong>  Cooking method: </strong>
+                              ${method}
+                            </div>
+                        </div>
+                    </div>`
+			  );
+			  }
+                index2 += 1;
+			});
+            });
+        });
       }
 
 displayDB()
