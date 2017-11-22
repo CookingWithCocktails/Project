@@ -52,12 +52,14 @@ function SubmitRecipe(){
     var method = $("#MethodInput").val();
     var ingredients = $("#IngredientsInput").val();
     var type=$("#SelectRecipeType").val();
+    var student=$("#StudentSuitable").val();
 
     var RecipeData = {
       author: author,
       title: title,
       method: method,
-      ingredients: ingredients
+      ingredients: ingredients,
+      student:student
     };
 
     if (type=="Food"){
