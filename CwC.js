@@ -73,7 +73,8 @@ function SubmitRecipe(){
 }
 function displayDB() {
       var database=firebase.database();
-      var index = 0;
+      var index =  0;
+      var index3=0;
       var index2 = 0;
       var ref=database.ref('Recipes/Food recipes /');
       var ref2=database.ref('Recipes/Cocktails/');
@@ -107,28 +108,66 @@ function displayDB() {
                     </div>`
                 );
                 index += 1;
-                index2=index;
+
               });
             });
         });
+        ref.once("value")
+          .then(function(snapshot) {
+            ref3.once("value", function(snapshot) {
+              snapshot.forEach(function(child) {
+  			          var student = child.val().student;
+                var ingredients = child.val().ingredients;
+                var method = child.val().method;
+                var title = child.val().title;
 
+  			  if(student=="Yes"){
+            index=index+1;
+            index2=index;
+                  $('#accordion3').append(
+                      `<div class="card">
+                          <div class="card-header" role="tab" id="heading${index2}">
+                              <h5 class="mb-0">
+                                  <a data-toggle="collapse" href="#collapse${index2}" aria-expanded="true" aria-controls="collapse${index}2">
+                                        ${title}
+                                  </a>
+                              </h5>
+                          </div>
+                          <div id="collapse${index2}" class="collapse" role="tabpanel" aria-labelledby="heading${index2}" data-parent="#accordion3">
+                              <div class="card-body">
+                                <strong>Ingredients: </strong>
+                                ${ingredients}<br>
+                                  <strong>  Cooking method: </strong>
+                                ${method}
+                              </div>
+                          </div>
+                      </div>`
+  			               );
+
+  			                }
+
+  			           });
+              });
+          });
         ref2.once("value")
           .then(function(snapshot) {
             ref2.once("value", function(snapshot) {
               snapshot.forEach(function(child) {
                 var ingredients = child.val().ingredients;
                 var method = child.val().method;
-                var title = child.val().title;;
+                var title = child.val().title;
+                index=index+1;
+                index3=index;
                   $('#accordion2').append(
                       `<div class="card">
-                          <div class="card-header" role="tab" id="heading${index2}">
+                          <div class="card-header" role="tab" id="heading${index3}">
                               <h5 class="mb-0">
-                                  <a data-toggle="collapse" href="#collapse${index2}" aria-expanded="true" aria-controls="collapse${index2}">
+                                  <a data-toggle="collapse" href="#collapse${index3}" aria-expanded="true" aria-controls="collapse${index3}">
                                         ${title}
                                   </a>
                               </h5>
                           </div>
-                          <div id="collapse${index2}" class="collapse" role="tabpanel" aria-labelledby="heading${index2}" data-parent="#accordion2">
+                          <div id="collapse${index3}" class="collapse" role="tabpanel" aria-labelledby="heading${index3}" data-parent="#accordion2">
                               <div class="card-body">
                               <strong>Ingredients: </strong>
                                 ${ingredients}<br>
@@ -138,45 +177,10 @@ function displayDB() {
                           </div>
                       </div>`
                   );
-                  index2 += 1;
-
                 });
               });
           });
-		  ref3.once("value")
-        .then(function(snapshot) {
-          ref3.once("value", function(snapshot) {
-            snapshot.forEach(function(child) {
-			var student = child.val().student;	
-              var ingredients = child.val().ingredients;
-              var method = child.val().method;
-              var title = child.val().title;
-			  
-			  if(student=="Yes"){
-                $('#accordion3').append(
-                    `<div class="card">
-                        <div class="card-header" role="tab" id="heading${index}">
-                            <h5 class="mb-0">
-                                <a data-toggle="collapse" href="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
-                                      ${title}
-                                </a>
-                            </h5>
-                        </div>
-                        <div id="collapse${index}" class="collapse" role="tabpanel" aria-labelledby="heading${index}" data-parent="#accordion">
-                            <div class="card-body">
-                              <strong>Ingredients: </strong>
-                              ${ingredients}<br>
-                                <strong>  Cooking method: </strong>
-                              ${method}
-                            </div>
-                        </div>
-                    </div>`
-			  );
-			  }
-                index2 += 1;
-			});
-            });
-        });
+
       }
 
 displayDB()
