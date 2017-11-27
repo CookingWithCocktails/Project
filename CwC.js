@@ -209,7 +209,7 @@ function displayDB() {
                  var title = child.val().title;
 				   
                  var lookfor = new RegExp(searching, 'i');
-                 if(title.match(lookfor)){
+                 if(title.match(lookfor) || ingredients.match(lookfor)){
 					 index = index+1;
                    console.log(title);
                    $('#searchthings').append(
@@ -245,7 +245,7 @@ function displayDB() {
                  var method = child.val().method;
                  var title = child.val().title;
                  var lookfor = new RegExp(searching, 'i');
-                 if(title.match(lookfor)){
+                 if(title.match(lookfor) || ingredients.match(lookfor)){
 					 index = index+1;
                    console.log(title);
                    $('#searchthings').append(
