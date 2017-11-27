@@ -73,9 +73,10 @@ function SubmitRecipe(){
       alert("Success!");
     }
 }
+var index =  0;
 function displayDB() {
       var database=firebase.database();
-      var index =  0;
+      
       var index3=0;
       var index2 = 0;
       var ref=database.ref('Recipes/Food recipes /');
@@ -114,6 +115,7 @@ function displayDB() {
               });
             });
         });
+
         ref.once("value")
           .then(function(snapshot) {
             ref3.once("value", function(snapshot) {
@@ -151,6 +153,8 @@ function displayDB() {
   			           });
               });
           });
+
+
         ref2.once("value")
           .then(function(snapshot) {
             ref2.once("value", function(snapshot) {
@@ -182,7 +186,102 @@ function displayDB() {
                 });
               });
           });
-
       }
+
+
+
+         $(document).ready(function(){
+
+            
+            var database=firebase.database();
+            var firebaseRef = firebase.database().ref();
+            $('#searchedbutton').click(function(){
+            var searching = document.getElementById("thissearched").value;
+            var database=firebase.database();
+            var ref=database.ref('Recipes/Food recipes /');
+			var ref2=database.ref('Recipes/Cocktails/');	
+             ref.once("value")
+             .then(function(snapshot) {
+             ref.once("value", function(snapshot) {
+               snapshot.forEach(function(child) {
+                 var ingredients = child.val().ingredients;
+                 var method = child.val().method;
+                 var title = child.val().title;
+				   
+                 var lookfor = new RegExp(searching, 'i');
+                 if(title.match(lookfor)){
+					 index = index+1;
+                   console.log(title);
+                   $('#searchthings').append(
+                       `<div class="card">
+                           <div class="card-header" role="tab" id="heading${index}">
+                               <h5 class="mb-0">
+                                   <a data-toggle="collapse" href="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
+                                         ${title}
+                                   </a>
+                               </h5>
+                           </div>
+                           <div id="collapse${index}" class="collapse" role="tabpanel" aria-labelledby="heading${index}" data-parent="#searchthings">
+                               <div class="card-body">
+                               <strong>Ingredients: </strong>
+                                 ${ingredients}<br>
+                                   <strong> Mixing method: </strong>
+                                 ${method}
+                               </div>
+                           </div>
+                       </div>`
+                   );
+                }
+                 });
+
+               });
+           });
+				
+				ref2.once("value")
+             .then(function(snapshot) {
+             ref2.once("value", function(snapshot) {
+               snapshot.forEach(function(child) {
+                 var ingredients = child.val().ingredients;
+                 var method = child.val().method;
+                 var title = child.val().title;
+                 var lookfor = new RegExp(searching, 'i');
+                 if(title.match(lookfor)){
+					 index = index+1;
+                   console.log(title);
+                   $('#searchthings').append(
+                       `<div class="card">
+                           <div class="card-header" role="tab" id="heading${index}">
+                               <h5 class="mb-0">
+                                   <a data-toggle="collapse" href="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
+                                         ${title}
+                                   </a>
+                               </h5>
+                           </div>
+                           <div id="collapse${index}" class="collapse" role="tabpanel" aria-labelledby="heading${index}" data-parent="#searchthings">
+                               <div class="card-body">
+                               <strong>Ingredients: </strong>
+                                 ${ingredients}<br>
+                                   <strong> Mixing method: </strong>
+                                 ${method}
+                               </div>
+                           </div>
+                       </div>`
+                   );
+                }
+                 });
+
+               });
+           });
+				
+				
+          $( "#searchthings" ).empty();
+          $( "#thissearched" ).val('');
+         });
+       });
+
+ $( "#searchedbutton").click(function(){
+   $('#search-tab').trigger('click');
+     });
+
 
 displayDB()

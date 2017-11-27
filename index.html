@@ -33,6 +33,9 @@
                 <li class="nav-item">
                     <a class="nav-link" id="submit-tab" data-toggle="tab" href="#submit" role="tab" aria-controls="submit">Submit Your Idea</a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="search-tab" data-toggle="tab" href="#search" role="tab" aria-controls="search">Search</a>
+                </li>
             </ul>
 
             <ul class="navbar-nav nav">
@@ -48,8 +51,8 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search">
-                <button class="btn btn-secondary my-2 my-sm-0 mr-1" type="submit">Search</button>
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" id="thissearched"  >
+                <button class="btn btn-secondary my-2 my-sm-0 mr-1" id="searchedbutton"  onclick="return false" >Search</button>
             </form>
         </div>
     </nav>
@@ -128,12 +131,15 @@
             <div class="jumbotron text-center">
                 <h1>Student Zone!! </h1>
             </div>
-			<div class="container">
-                <div id="accordion3" role="tablist" id="fRecipes">
+
+            <div class="container">
+                <div id="accordion3" role="tablist" id="StRecipes">
                 </div>
                 <!-- <div class="card-columns" id="frecipes"> -->
                 <!--</div> -->
             </div>
+
+
         </div>
 
 
@@ -181,16 +187,40 @@
                     <div class="form-group">
                         <label for="MethodInput">Method</label>
                         <textarea class="form-control" id="MethodInput" rows="3"></textarea>
+
                     </div>
-                    <button id="EnterRecipe" type="submit" class="btn btn-secondary">Submit!!!</button>
+
+
+                    <button id="submitthis"  type="submit" class="btn btn-secondary">Submit!!!</button>
                 </form>
             </div>
+            <input type="file" id="file" name="datafile">
+            <div id="linkbox"></div>
+          <button id="test" onclick="what()">test</button>
         </div>
+
+
+        <div class="tab-pane fade" id="search" role="tabpanel" aria-labelledby="search-tab">
+            <div class="jumbotron text-center">
+                <h1>Search Results</h1>
+            </div>
+            <div class="container">
+                <div id="searchthings" role="tablist">
+                </div>
+
+            </div>
+
+        </div>
+
+
+
+
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-auth.js"></script>
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-database.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-storage.js"></script>
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
         crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js" integrity="sha384-b/U6ypiBEHpOf/4+1nzFpr53nxSS+GLCkfwBdFNTxtclqqenISfwAzpKaMNFNmj4"
