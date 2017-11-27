@@ -34,7 +34,7 @@
                     <a class="nav-link" id="submit-tab" data-toggle="tab" href="#submit" role="tab" aria-controls="submit">Submit Your Idea</a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" id="search-tab" data-toggle="tab" href="#search" role="tab" aria-controls="search">Search</a>
+                    <a class="nav-link" id="search-tab" data-toggle="tab" href="#search" role="tab" aria-controls="search"></a>
                 </li>
             </ul>
 
@@ -51,8 +51,8 @@
                 </li>
             </ul>
             <form class="form-inline my-2 my-lg-0">
-                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" id="thissearched"  >
-                <button class="btn btn-secondary my-2 my-sm-0 mr-1" id="searchedbutton"  onclick="return false" >Search</button>
+                <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" id="thissearched">
+                <button class="btn btn-secondary my-2 my-sm-0 mr-1" id="searchedbutton" onclick="return false">Search</button>
             </form>
         </div>
     </nav>
@@ -120,8 +120,6 @@
             <div class="container">
                 <div id="accordion" role="tablist" id="fRecipes">
                 </div>
-                <!-- <div class="card-columns" id="frecipes"> -->
-                <!--</div> -->
             </div>
 
         </div>
@@ -135,8 +133,6 @@
             <div class="container">
                 <div id="accordion3" role="tablist" id="StRecipes">
                 </div>
-                <!-- <div class="card-columns" id="frecipes"> -->
-                <!--</div> -->
             </div>
 
 
@@ -160,7 +156,7 @@
                 <h1>Share your secret!?</h1>
             </div>
             <div class="container">
-                <form id = "Recipe-submit-form" onsubmit="return SubmitRecipe();">
+                <form id="Recipe-submit-form" onsubmit="return SubmitRecipe();">
                     <div class="form-group">
                         <label for="SelectRecipeType">Choose recipe type:</label>
                         <select class="form-control" id="SelectRecipeType">
@@ -191,12 +187,12 @@
                     </div>
 
 
-                    <button id="submitthis"  type="submit" class="btn btn-secondary">Submit!!!</button>
+                    <button id="submitthis" type="submit" class="btn btn-secondary">Submit!!!</button>
                 </form>
             </div>
             <input type="file" id="file" name="datafile">
             <div id="linkbox"></div>
-          <button id="test" onclick="what()">test</button>
+            <button id="test" onclick="what()">test</button>
         </div>
 
 
