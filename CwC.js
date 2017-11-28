@@ -6,10 +6,8 @@ var config = {
     storageBucket: "cwc-2017.appspot.com",
     messagingSenderId: "377243567404"
 };
+var index =  0;
 firebase.initializeApp(config);
-
-var str5="a";
-var test1="test";
 window.onload = function() {
     var uiConfig = {
         callbacks: {
@@ -41,7 +39,6 @@ window.onload = function() {
         $("#UILogged").hide();
       }
     });
-
 };
 function SubmitRecipe(){
     var database=firebase.database();
@@ -53,7 +50,6 @@ function SubmitRecipe(){
     var ingredients = $("#IngredientsInput").val();
     var type=$("#SelectRecipeType").val();
     var student=$("#StudentSuitable").val();
-
     var RecipeData = {
       author: author,
       title: title,
@@ -61,7 +57,6 @@ function SubmitRecipe(){
       ingredients: ingredients,
       student:student
     };
-
     if (type=="Food"){
       var ref=database.ref('Recipes/Food recipes /');
       ref.push(RecipeData);
@@ -73,15 +68,14 @@ function SubmitRecipe(){
       alert("Success!");
     }
 }
-var index =  0;
+
 function displayDB() {
       var database=firebase.database();
-      
-      var index3=0;
       var index2 = 0;
+      var index3=0;
       var ref=database.ref('Recipes/Food recipes /');
       var ref2=database.ref('Recipes/Cocktails/');
-	  var ref3=database.ref('Recipes/Food recipes /');
+	    var ref3=database.ref('Recipes/Food recipes /');
       //pull food from the db
       ref.once("value")
         .then(function(snapshot) {
@@ -130,14 +124,14 @@ function displayDB() {
             index2=index;
                   $('#accordion3').append(
                       `<div class="card">
-                          <div class="card-header" role="tab" id="heading${index2}">
+                          <div class="card-header" role="tab" id="heading${index}">
                               <h5 class="mb-0">
-                                  <a data-toggle="collapse" href="#collapse${index2}" aria-expanded="true" aria-controls="collapse${index}2">
+                                  <a data-toggle="collapse" href="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}2">
                                         ${title}
                                   </a>
                               </h5>
                           </div>
-                          <div id="collapse${index2}" class="collapse" role="tabpanel" aria-labelledby="heading${index2}" data-parent="#accordion3">
+                          <div id="collapse${index}" class="collapse" role="tabpanel" aria-labelledby="heading${index}" data-parent="#accordion3">
                               <div class="card-body">
                                 <strong>Ingredients: </strong>
                                 ${ingredients}<br>
@@ -147,8 +141,7 @@ function displayDB() {
                           </div>
                       </div>`
   			               );
-
-  			                }
+  			               }
 
   			           });
               });
@@ -166,14 +159,14 @@ function displayDB() {
                 index3=index;
                   $('#accordion2').append(
                       `<div class="card">
-                          <div class="card-header" role="tab" id="heading${index3}">
+                          <div class="card-header" role="tab" id="heading${index}">
                               <h5 class="mb-0">
-                                  <a data-toggle="collapse" href="#collapse${index3}" aria-expanded="true" aria-controls="collapse${index3}">
+                                  <a data-toggle="collapse" href="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
                                         ${title}
                                   </a>
                               </h5>
                           </div>
-                          <div id="collapse${index3}" class="collapse" role="tabpanel" aria-labelledby="heading${index3}" data-parent="#accordion2">
+                          <div id="collapse${index}" class="collapse" role="tabpanel" aria-labelledby="heading${index}" data-parent="#accordion2">
                               <div class="card-body">
                               <strong>Ingredients: </strong>
                                 ${ingredients}<br>
@@ -192,14 +185,14 @@ function displayDB() {
 
          $(document).ready(function(){
 
-            
+
             var database=firebase.database();
             var firebaseRef = firebase.database().ref();
             $('#searchedbutton').click(function(){
             var searching = document.getElementById("thissearched").value;
             var database=firebase.database();
             var ref=database.ref('Recipes/Food recipes /');
-			var ref2=database.ref('Recipes/Cocktails/');	
+			      var ref2=database.ref('Recipes/Cocktails/');
              ref.once("value")
              .then(function(snapshot) {
              ref.once("value", function(snapshot) {
@@ -207,10 +200,10 @@ function displayDB() {
                  var ingredients = child.val().ingredients;
                  var method = child.val().method;
                  var title = child.val().title;
-				   
+
                  var lookfor = new RegExp(searching, 'i');
                  if(title.match(lookfor) || ingredients.match(lookfor)){
-					 index = index+1;
+					         index = index+1;
                    console.log(title);
                    $('#searchthings').append(
                        `<div class="card">
@@ -236,7 +229,7 @@ function displayDB() {
 
                });
            });
-				
+
 				ref2.once("value")
              .then(function(snapshot) {
              ref2.once("value", function(snapshot) {
@@ -246,7 +239,7 @@ function displayDB() {
                  var title = child.val().title;
                  var lookfor = new RegExp(searching, 'i');
                  if(title.match(lookfor) || ingredients.match(lookfor)){
-					 index = index+1;
+					       index = index+1;
                    console.log(title);
                    $('#searchthings').append(
                        `<div class="card">
@@ -272,8 +265,6 @@ function displayDB() {
 
                });
            });
-				
-				
           $( "#searchthings" ).empty();
           $( "#thissearched" ).val('');
          });
