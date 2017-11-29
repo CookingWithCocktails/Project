@@ -229,9 +229,7 @@ $(document).ready(function () {
                        </div>`);
                         }
                     });
-                    if(!searchResults){
-                        $('#searchthings').html(`<h2 style="text-align: center">No results found! :'(</h2>`);                        
-                    }
+           
                 });
             });
 
@@ -242,9 +240,9 @@ $(document).ready(function () {
                         var ingredients = child.val().ingredients;
                         var method = child.val().method;
                         var title = child.val().title;
-                        var searchResults = false;                        
                         var lookfor = new RegExp(searching, 'i');
                         if (title.match(lookfor) || ingredients.match(lookfor)) {
+                            searchResults=true;
                             index = index + 1;
                             console.log(title);
                             $('#searchthings').append(
