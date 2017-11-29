@@ -1,0 +1,59 @@
+.buto{
+    background-color: coral;
+    color: white;
+}
+
+.nav-tabs > li > a {
+  color: #575757;
+}
+.nav-tabs > li.active > a {
+  color: #3c5a78;
+  font-size: 16px;
+}
+
+.dTab{
+  padding-top: 5%;
+  padding-left: 10%;
+  font-family: 'Sofia';
+  font-size: 42px;
+}
+
+.sZone{
+  color: darkblue;
+  padding-top: 7%;
+  padding-left: 5%;
+  font-family: 'Sofia';
+  font-size: 42px;
+}
+
+.cTab{
+  padding-top: 5%;
+  padding-left: 2%;
+  color: white;
+  font-family: 'Sofia';
+  font-size: 42px;
+}
+
+.subTab{
+  color: white;
+  padding-top: 7%;
+  padding-left: 10%;
+  font-family: 'Sofia';
+  font-size: 42px;
+}
+
+.home{  color: white;
+  padding-top: 7%;
+  padding-left: 10%;
+  font-family: 'Sofia';
+  font-size: 56px;}
+
+  .searchTab{
+    color: black;
+    padding-top: 7%;
+    padding-left: 10%;
+    font-family: 'Sofia';
+    font-size: 42px;
+  }
+
+  
