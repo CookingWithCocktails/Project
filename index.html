@@ -5,6 +5,7 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta/css/bootstrap.min.css" integrity="sha384-/Y6pD6FV/Vv2HJnA6t+vslU6fwYXjCFtcEpHbNJ0lyAFsXTsjBbfaDjzALeQsN6M"
         crossorigin="anonymous">
     <link rel="stylesheet" type="text/css" href="CwC.css">
+    <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
     <script src="https://cdn.firebase.com/libs/firebaseui/2.4.1/firebaseui.js"></script>
     <link type="text/css" rel="stylesheet" href="https://cdn.firebase.com/libs/firebaseui/2.4.1/firebaseui.css">
 </header>
@@ -52,20 +53,24 @@
             </ul>
             <form class="form-inline my-2 my-lg-0">
                 <input class="form-control mr-sm-2" type="text" placeholder="Search" aria-label="Search" id="thissearched">
-                <button class="btn btn-secondary my-2 my-sm-0 mr-1" id="searchedbutton" onclick="return false" >Search</button>
+                <button class="btn btn-secondary my-2 my-sm-0 mr-1" id="searchedbutton" onclick="return false">Search</button>
             </form>
         </div>
     </nav>
 
     <div class="tab-content" id="myTabContent">
         <div class="tab-pane fade show active" id="home" role="tabpanel" aria-labelledby="home-tab">
-            <div class="jumbotron text-center">
-                <h1>Cooking with Cocktails!</h1>
+            <div class="card mb-3">
+                <img class="card-img" class="mh-100" style="height: 300px;" src="https://firebasestorage.googleapis.com/v0/b/cwc-2017.appspot.com/o/home.jpg?alt=media&token=b84785b2-1116-440d-b59f-abef98a3385a"
+                    alt="home">
+                <div class="card-img-overlay">
+                    <h2 class="home">Cooking with Cocktails</h2>
+                </div>
             </div>
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card" style="height: 16rem">
+                        <div class="card border-dark mb-3" style="height: 16rem">
                             <div class="card-body">
                                 <h3 class="card-title">Fancy some food? </h3>
                                 <p class="card-text">Click our What's for Dinner? tab to start cooking away</p>
@@ -75,7 +80,7 @@
                     </div>
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card" style="height: 16em">
+                        <div class="card border-dark mb-3" style="height: 16em">
                             <div class="card-body">
                                 <h3 class="card-title">How about a tasty drink?</h3>
                                 <p class="card-text">Go ahead and click our Fancy a Cocktail? tab to mix up something tasty</p>
@@ -85,7 +90,7 @@
                     </div>
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card" style="height: 16rem">
+                        <div class="card border-dark mb-3" style="height: 16rem">
                             <div class="card-body">
                                 <h3 class="card-title">Student Zone! </h3>
                                 <p class="card-text">What's this you ask?</p>
@@ -96,7 +101,7 @@
                     </div>
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card" style="height: 16rem">
+                        <div class="card border-dark mb-3" style="height: 16rem">
                             <div class="card-body">
                                 <h3 class="card-title">Submit Your Idea</h3>
                                 <p class="card-text">Yes YOU!</p>
@@ -113,9 +118,14 @@
 
 
         <div class="tab-pane fade" id="dinner" role="tabpanel" aria-labelledby="dinner-tab">
-            <div class="jumbotron text-center">
-                <h1>What's for Dinner? </h1>
+            <div class="card mb-3">
+                <img class="card-img" class="mh-100" style="height: 300px;" src="https://firebasestorage.googleapis.com/v0/b/cwc-2017.appspot.com/o/ingredients-header.jpg?alt=media&token=062becef-e2ff-41ca-8e93-59de67a381a9"
+                    alt="food">
+                <div class="card-img-overlay">
+                    <h2 class="dTab">What's for dinner?</h2>
+                </div>
             </div>
+
 
             <div class="container">
                 <div id="accordion" role="tablist" id="fRecipes">
@@ -126,8 +136,12 @@
 
 
         <div class="tab-pane fade" id="student" role="tabpanel" aria-labelledby="student-tab">
-            <div class="jumbotron text-center">
-                <h1>Student Zone! </h1>
+            <div class="card mb-3">
+                <img class="card-img" class="mh-100" style="height: 300px;" src="https://firebasestorage.googleapis.com/v0/b/cwc-2017.appspot.com/o/sHeader.jpg?alt=media&token=8521b982-d5b6-407b-9570-97a9a4adfba7"
+                    alt="wood">
+                <div class="card-img-overlay">
+                    <h2 class="sZone">Student Zone!</h2>
+                </div>
             </div>
 
             <div class="container">
@@ -140,9 +154,14 @@
 
 
         <div class="tab-pane fade" id="cocktail" role="tabpanel" aria-labelledby="cocktail-tab">
-            <div class="jumbotron text-center">
-                <h1>Cocktails!</h1>
+            <div class="card mb-3">
+                <img class="card-img" class="mh-100" style="height: 300px;" src="https://firebasestorage.googleapis.com/v0/b/cwc-2017.appspot.com/o/cocktailheader.jpg?alt=media&token=f30ec592-abaa-4655-a906-6a8351927cb9"
+                    alt="cocktail">
+                <div class="card-img-overlay">
+                    <h2 class="cTab">Cocktails Cocktails</h2>
+                </div>
             </div>
+
             <div class="container">
                 <div id="accordion2" role="tablist" id="fRecipes">
                 </div>
@@ -152,8 +171,12 @@
         </div>
 
         <div class="tab-pane fade" id="submit" role="tabpanel" aria-labelledby="submit-tab">
-            <div class="jumbotron text-center">
-                <h1>Share your secret!</h1>
+            <div class="card mb-3">
+                <img class="card-img" class="mh-100" style="height: 300px;" src="https://firebasestorage.googleapis.com/v0/b/cwc-2017.appspot.com/o/idea.png?alt=media&token=0e2c9a58-f738-4e4c-9b26-771dacce033c"
+                    alt="idea">
+                <div class="card-img-overlay">
+                    <h2 class="subTab">Share your Secret</h2>
+                </div>
             </div>
             <div class="container">
                 <form id="Recipe-submit-form" onsubmit="return SubmitRecipe();">
@@ -200,14 +223,8 @@
             <div class="container">
                 <div id="searchthings" role="tablist">
                 </div>
-
             </div>
-
         </div>
-
-
-
-
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>

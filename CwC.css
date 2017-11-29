@@ -1,4 +1,3 @@
-
 .buto{
     background-color: coral;
     color: white;
@@ -12,10 +11,39 @@
   font-size: 16px;
 }
 
-.c1{
-    height:50rem;
+.dTab{
+  padding-top: 5%;
+  padding-left: 10%;
+  font-family: 'Sofia';
+  font-size: 42px;
 }
 
-.bla{
-  float: left;
+.sZone{
+  color: darkblue;
+  padding-top: 7%;
+  padding-left: 5%;
+  font-family: 'Sofia';
+  font-size: 42px;
 }
+
+.cTab{
+  padding-top: 5%;
+  padding-left: 2%;
+  color: white;
+  font-family: 'Sofia';
+  font-size: 42px;
+}
+
+.subTab{
+  color: white;
+  padding-top: 7%;
+  padding-left: 10%;
+  font-family: 'Sofia';
+  font-size: 42px;
+}
+
+.home{  color: white;
+  padding-top: 7%;
+  padding-left: 10%;
+  font-family: 'Sofia';
+  font-size: 56px;}
