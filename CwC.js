@@ -230,7 +230,7 @@ $(document).ready(function () {
                         }
                     });
                     if(!searchResults){
-                        $('#searchthings').html(`<h2>No results found! :'(</h2>`);                        
+                        $('#searchthings').html(`<h2 style="text-align: center">No results found! :'(</h2>`);                        
                     }
                 });
             });
@@ -269,7 +269,7 @@ $(document).ready(function () {
                         }
                     });
                     if(!searchResults){
-                        $('#searchthings').html(`<h2>No results found! :'(</h2>`);                        
+                        $('#searchthings').html(`<h2 style="text-align: center">No results found! :'(</h2>`);                        
                     }
                 });
             });
