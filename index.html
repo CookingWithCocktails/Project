@@ -37,6 +37,9 @@
                 <li class="nav-item">
                     <a class="nav-link" id="search-tab" data-toggle="tab" href="#search" role="tab" aria-controls="search"></a>
                 </li>
+                <li class="nav-item">
+                    <a class="nav-link" id="favourite-tab" data-toggle="tab" href="#favourite" role="tab" aria-controls="favourite"></a>
+                </li>
             </ul>
 
             <ul class="navbar-nav nav">
@@ -46,7 +49,7 @@
                         <div id="firebaseui-auth-container"></div>
                         <div id="UILogged">
                             <a class="dropdown-item" onclick="firebase.auth().signOut()">Log Out</a>
-                            <a class="dropdown-item" href="#">Favourites</a>
+                            <a class="dropdown-item" onclick="$('#favourite-tab').trigger('click');">Favourites</a>
                         </div>
                     </div>
                 </li>
@@ -70,7 +73,7 @@
             <div class="container">
                 <div class="row">
                     <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card border-dark mb-3  bg-light mb-3" style="height: 16rem">
+                        <div class="card border-dark mb-3" style="height: 16rem">
                             <div class="card-body">
                                 <h3 class="card-title">Fancy some food? </h3>
                                 <p class="card-text">Click our What's for Dinner? tab to start cooking away</p>
@@ -80,7 +83,7 @@
                     </div>
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card border-dark mb-3 bg-light mb-3" style="height: 16em">
+                        <div class="card border-dark mb-3" style="height: 16em">
                             <div class="card-body">
                                 <h3 class="card-title">How about a tasty drink?</h3>
                                 <p class="card-text">Go ahead and click our Fancy a Cocktail? tab to mix up something tasty</p>
@@ -90,7 +93,7 @@
                     </div>
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card border-dark mb-3 bg-light mb-3" style="height: 16rem">
+                        <div class="card border-dark mb-3" style="height: 16rem">
                             <div class="card-body">
                                 <h3 class="card-title">Student Zone! </h3>
                                 <p class="card-text">What's this you ask?</p>
@@ -101,7 +104,7 @@
                     </div>
 
                     <div class="col-sm-6 col-md-4 col-lg-3">
-                        <div class="card border-dark mb-3 bg-light mb-3" style="height: 16rem">
+                        <div class="card border-dark mb-3" style="height: 16rem">
                             <div class="card-body">
                                 <h3 class="card-title">Submit Your Idea</h3>
                                 <p class="card-text">Yes YOU!</p>
@@ -208,8 +211,6 @@
                         <textarea class="form-control" id="MethodInput" rows="3"></textarea>
 
                     </div>
-
-
                     <button id="submitthis" type="submit" class="btn btn-secondary">Submit!!!</button>
                 </form>
             </div>
@@ -229,6 +230,20 @@
                 </div>
             </div>
         </div>
+
+        <div class="tab-pane fade" id="favourite" role="tabpanel" aria-labelledby="favourite-tab">
+                  <div class="jumbotron text-center">
+                      <h1>Favs </h1>
+                  </div>
+
+                  <div class="container">
+                      <div id="accordion432" role="tablist" id="StRecipes">
+                      </div>
+                      <!-- <div class="card-columns" id="frecipes"> -->
+                      <!--</div> -->
+                  </div>
+
+
     </div>
 
     <script src="https://www.gstatic.com/firebasejs/4.6.2/firebase-app.js"></script>
