@@ -32,23 +32,86 @@
         "ingredients" : "1 1/2 oz White rum, 6 leaves of Mint, Soda Water, 1 oz Fresh lime juice, 2 teaspoons Sugar",
         "method" : "Mint sprigs muddled with sugar and lime juice. Rum added and topped with soda water. Garnished with sprig of mint leaves. Served with a straw.",
         "title" : "Mojito"
+      },
+      "-L-T4ylT47rT9d8rM4Iu" : {
+        "author" : "Michael Mcloughlin",
+        "ingredients" : "3 oz (6 parts) Orange juice, 1 1/2 oz (3 parts) Tequila, 1/2 oz (1 part) Grenadine syrup",
+        "method" : "Pour the tequila and orange juice into glass over ice. Add the grenadine, which will sink to the bottom. Do not stir. Garnish and serve",
+        "student" : "Yes",
+        "title" : "Tequila Sunrise"
+      },
+      "-L-T5etEUtWNKs0o3-ZL" : {
+        "author" : "Michael Mcloughlin",
+        "ingredients" : "3 oz (3 parts) Pineapple juice, 1 oz (one part) White rum, 1 oz (one part) Coconut cream",
+        "method" : "Mix with crushed ice until smooth. Pour into chilled glass, garnish and serve.",
+        "student" : "Yes",
+        "title" : "Piña Colada"
+      },
+      "-L-T82fnms03SNbsQiN8" : {
+        "author" : "Michael Mcloughlin",
+        "ingredients" : "1/2 oz Fresh lime juice, 1 oz Cranberry juice, 1/2 oz Cointreau, 1 1/2 oz Vodka Citron",
+        "method" : "Add all ingredients into cocktail shaker filled with ice. Shake well and double strain into large cocktail glass. Garnish with lime wheel.",
+        "student" : "Yes",
+        "title" : "Cosmopolitan"
+      },
+      "-L-T9NdDhCZIpzbewCxQ" : {
+        "author" : "Michael Mcloughlin",
+        "ingredients" : "2 oz Vodka, 1⁄2 oz Simple syrup, 1⁄2 oz Kahlúa, 1 oz Freshly brewed espresso",
+        "method" : "Add all of the ingredients to a shaker filled with ice and shake. Fine-strain into a chilled cocktail glass, and garnish with 3 coffee beans.",
+        "student" : "Yes",
+        "title" : "Espresso Martini"
+      },
+      "-L-TAxKkmCCXz46ZXh4r" : {
+        "author" : "Michael Mcloughlin",
+        "ingredients" : "1/4 oz Irish whiskey, 1 pint Guinness , 1/4 oz Coffee liqueur, 1/2 oz Irish cream",
+        "method" : "The whiskey and coffee liqueur are floated on top of the Irish cream in a shot glass, and the shot glass is then dropped into the Guinness.",
+        "student" : "Yes",
+        "title" : "Irish Car Bomb"
+      },
+      "-L-TC0oYMbJ8eSpRZjAx" : {
+        "author" : "Michael Mcloughlin",
+        "ingredients" : "2/3 oz (2 parts) Coffee liqueur, 1 2/3 oz (5 parts) Vodka, 1 oz (3 parts) Fresh cream or Milk",
+        "method" : "Pour coffee liqueur and vodka into an Old Fashioned glass filled with ice. Float fresh cream or milk on top and stir slowly.",
+        "student" : "Yes",
+        "title" : "White Russian"
       }
     },
     "Favourites" : {
-      "-KzxxGAfd-wjnWot8mo0" : {
-        "author" : "Paul Paul",
-        "ingredients" : "",
-        "method" : "",
-        "title" : ""
+      "7zCOil0rAMUYAuNF9PbzGlHcbRA3" : {
+        "-L-BokpJyRytLyyAQuqY" : {
+          "ingredients" : "London Dry gin, tonic water, lime wedge ",
+          "method" : "Pour over ice, garnish with lime wedge",
+          "title" : "Gin & Tonic"
+        }
       },
-      "-Kzxxe1bkUFFsftTo5PA" : {
-        "author" : "Paul Paul",
-        "ingredients" : "",
-        "method" : "",
-        "title" : ""
+      "LX72WgWC65UPruxKc9osgtIPTYb2" : {
+        "-L-BoZ0z5-qf5aGWrUSD" : {
+          "ingredients" : "2 tins Mushy Peas\n1 tin Chopped Tomatoes\n1 tin Baked Beans\n1  Onion diced\n6-8  Button Mushrooms\n500 g Chicken Breast Diced - you can also use diced pork\n2 tsp Curry Powder\n1 tsp Chilli Powder\n1 clove  Garlic crushed\n2  Chicken Stock Cubes\n  Seasoning to Taste\n  Frylight Cooking Spray\n  Fruit and Vegetables ",
+          "method" : "1. Sauté the onions, garlic and mushrooms in a few sprays of low fat cooking spray\n2. Add the tinned ingredients, stock cubes, curry powder and chilli powder, to the boil and then simmer for 20 minutes\n3. While this is cooking sauté the diced meat and all the extra veg\n4. After 20 minutes remove the curry from the heat and blend until smooth in a food processor\n5. When smooth add to the pan with the meat and veg and simmer for another 10 minutes\n6. Season to taste",
+          "title" : "Guilt Free Chicken Curry"
+        }
       },
-      "testy" : {
-        "test" : "test"
+      "tnxsFlqdyMO7uUplQuJndcABlDC3" : {
+        "-L-TPjeR278t5q9AkR1d" : {
+          "ingredients" : "2 tins Mushy Peas\n1 tin Chopped Tomatoes\n1 tin Baked Beans\n1  Onion diced\n6-8  Button Mushrooms\n500 g Chicken Breast Diced - you can also use diced pork\n2 tsp Curry Powder\n1 tsp Chilli Powder\n1 clove  Garlic crushed\n2  Chicken Stock Cubes\n  Seasoning to Taste\n  Frylight Cooking Spray\n  Fruit and Vegetables ",
+          "method" : "1. Sauté the onions, garlic and mushrooms in a few sprays of low fat cooking spray\n2. Add the tinned ingredients, stock cubes, curry powder and chilli powder, to the boil and then simmer for 20 minutes\n3. While this is cooking sauté the diced meat and all the extra veg\n4. After 20 minutes remove the curry from the heat and blend until smooth in a food processor\n5. When smooth add to the pan with the meat and veg and simmer for another 10 minutes\n6. Season to taste",
+          "title" : "Guilt Free Chicken Curry"
+        },
+        "-L-TQ6YDEgspIJtBHzf1" : {
+          "ingredients" : "about 4 skin-on chicken thighs and 4 drumsticks- buy a mixed pack,\n6 tbsp piri-piri marinade (you can buy mild, medium or hot),\n1 tbsp sunflower oil,\n2 peppers, any colour, deseeded and finely chopped,\n½ bunch spring onions, sliced, white and green parts separated,\n4 tbsp tomato purée,\n1 tbsp sweet smoked paprika,\n250g cooked rice,\nvegetables or salad, to serve (optional)",
+          "method" : "1. Heat oven to 200C/180C fan/gas 6. Slash each piece of chicken 3 times, so the marinade can really flavour the meat. Pour over the sauce and leave in the fridge to marinate, if you have time. If not, mix well and arrange, skin-side up, in a roasting tin. Cook for 30 mins, then increase heat to 220C/200C fan/gas 7 and cook for about 15 mins more until the skin is crispy and golden.\n2. When the chicken is almost ready, heat the oil in a frying pan. Cook the peppers and white parts of the spring onions for 5 mins. Tip in the purée and paprika, stir, then add the rice, breaking up with a wooden spoon so all the grains are coated well. Use a high heat and scrape any that sticks off the bottom so you get some soft and some crispy parts. Heat until piping hot. Scatter the green parts of the spring onion on top and serve with the chicken, and some vegetables or salad, if you like.",
+          "title" : "Piri-Piri Chicken with Spicy Rice"
+        },
+        "-L-TQ82sm1D7CKI7FI7G" : {
+          "ingredients" : "1 onion diced, 1 garlic clove crushed, 1 kg chicken breasts sliced, 1 tbs soy sauce, 2 tsp curry powder, 3 tbs peanut butter, 2 tsp Worcestershire sauce, 3 tsp sugar, 2 tbs chilli sauce, 2 cups hot water",
+          "method" : "Fry onion, garlic in a little oil. Add chicken and fry for a minute. Add soy sauce, curry powder, peanut butter, Worcestershire sauce, sugar and chilli sauce. Add hot water and combine. Simmer for approximately 20 minutes until chicken is cooked.",
+          "title" : "Simple Chicken Satay"
+        },
+        "-L-TUwRqER-r3jdjDy-q" : {
+          "ingredients" : "thisisarfoodasdasd",
+          "method" : "thisisarfoodasdasd",
+          "title" : "thisisarfoodasdasd"
+        }
       }
     },
     "Food recipes " : {
@@ -88,11 +151,40 @@
         "student" : "Yes",
         "title" : "Cheesy ham & broccoli pasta"
       },
-      "-KzyYFQVqoZ2hDNc1a3u" : {
-        "author" : "Charlotte Lokko",
-        "ingredients" : "200g carton passata,\npack of 5 large Middle Eastern flatbreads,\n½ x 750g bag frozen spinach, defrosted,\n1 garlic clove, chopped,\n3 balls mozzarella, patted dry and torn,\n5 medium eggs,\nfreshly grated nutmeg,\nsmall bunch basil,\nshaved parmesan (or vegetarian alternative), to serve,",
-        "method" : "1. Heat the oven to as high as it will go. Spread 1-2 tbsp of passata over each flatbread. Squeeze as much water as you can from the spinach (this will prevent your pizzas from being soggy), then scatter on top, leaving a gap in the centre. Divide the garlic and mozzarella between the pizzas, seasoning generously as you go.\n2. You will probably only be able to bake 2 pizzas at a time. So put 2 on a baking tray, carefully crack an egg into the middle of each, and season with nutmeg and some of the basil. Bake for 7 mins until the cheese has melted and the egg is cooked to your liking.\n3. Repeat with the remaining pizzas and ingredients. Serve, garnished with a little more basil and some Parmesan. Cut into slices and share between everyone.",
-        "title" : "Cheap-as-chips veggie pizza"
+      "-L-76zYuklQQFwyE5FJf" : {
+        "author" : "Gareth Quaile",
+        "ingredients" : "1 Chicken Fillet, 1 cup Pasta, 200g Red Pepper, 200g Chopped Tomatoes, 1tsp Olive Oil, 100g Tomato Passata, 1tsp Red Pesto, Basil, Garlic Salt, Table Salt, Black Pepper",
+        "method" : "Put pasta on to boil.\nDice chicken fillet and red pepper and set to boil 5 minutes after pasta is put on.\nWith 5 minutes until pasta and chicken is completed, oil up a small pan. \nAdd passata, chopped tomatoes and red pesto sprinkling in salt, pepper, garlic salt and basil.\nStir until sauce thickens.\nStrain pasta, chicken and peppers and serve with tomato sauce on top.\n\n",
+        "student" : "Yes",
+        "title" : "Simple Chicken Pasta with Tomato Sauce "
+      },
+      "-L-TIRgOPJd_3f0qHh4W" : {
+        "author" : "Michael Mcloughlin",
+        "ingredients" : "1 onion diced, 1 garlic clove crushed, 1 kg chicken breasts sliced, 1 tbs soy sauce, 2 tsp curry powder, 3 tbs peanut butter, 2 tsp Worcestershire sauce, 3 tsp sugar, 2 tbs chilli sauce, 2 cups hot water",
+        "method" : "Fry onion, garlic in a little oil. Add chicken and fry for a minute. Add soy sauce, curry powder, peanut butter, Worcestershire sauce, sugar and chilli sauce. Add hot water and combine. Simmer for approximately 20 minutes until chicken is cooked.",
+        "student" : "Yes",
+        "title" : "Simple Chicken Satay"
+      },
+      "-L-TM-SGRWDqGZQela1J" : {
+        "author" : "Michael Mcloughlin",
+        "ingredients" : "1/2 tbsp olive oil, 1 finely chopped onion, 500g Minced beef 15% fat, 1 tsp mixed dried herbs, 1 beaten egg, 4 slices mature Cheddar , 4 brioche  burger buns, few torn lettuce leaves, 1 sliced tomato,",
+        "method" : "Heat the olive oil in a frying pan, add the onion and cook for 5 minutes until softened and starting to turn golden. Set aside. In a bowl, combine the beef mince with the herbs and the egg. Season, add the onions and mix well. Using your hands, shape into 4 patties. Cook the burgers on a preheated frying pan for 5-6 minutes on each side. While the second side is cooking, lay a slice of cheese on top to melt slightly . Meanwhile, lightly toast the buns under the grill. Garnish with the lettuce and tomato slices. Serve with ketchup, if you like.",
+        "student" : "Yes",
+        "title" : "Tasty Homemade Burger"
+      },
+      "-L-TOIxualgW13f47-kO" : {
+        "author" : "Michael Mcloughlin",
+        "ingredients" : "1 sirloin steak, 1 onion, 4 small mushrooms, 1 ciabatta , 1 tsp olive oil. ",
+        "method" : "Add the olive oil to the pan and heat to a medium temperature. Dice the onion and mushrooms, then add to the pan and fry for a few minutes. Add the steak to the frying pan and seal both sides. Continue to fry the steak for 5 minutes each side. Cut the ciabatta in half and place the steak in it, topped with the onion and mushrooms. Enjoy!",
+        "student" : "Yes",
+        "title" : "Steak Sandwich "
+      },
+      "-L-TRwDAIhGw298O26ha" : {
+        "author" : "Michael Mcloughlin",
+        "ingredients" : "1 onion, 2 cloves of garlic, 1 tin chopped tomatoes, 1 jar tomato sauce, 500g minced beef, 1 tsp mixed herbs, 150g spaghetti, 1 tsp olive oil ",
+        "method" : "Add the olive oil to the pan and heat to a medium temperature. Add the chopped onion and crushed garlic, and fry for 2 minutes. Add the mince to the pan and cook it fully. Add the mixed herbs, chopped tomatoes and the tomato sauce to the mince and simmer. Meanwhile, bring a pot of water to the boil and add the spaghetti. Simmer until the spaghetti is fully cooked and then drain.  Serve and enjoy!",
+        "student" : "Yes",
+        "title" : "Spaghetti Bolognese"
       }
     }
   }
