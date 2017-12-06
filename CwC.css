@@ -3,6 +3,13 @@
     color: white;
 }
 
+.buto1{
+  background-color: coral;
+  color: white;
+  margin-left: 40%;
+  margin-bottom: 2%;
+}
+
 .nav-tabs > li > a {
   color: #575757;
 }
@@ -42,18 +49,32 @@
   font-size: 42px;
 }
 
-.home{  color: white;
+.home{  
+  color: white;
   padding-top: 7%;
   padding-left: 10%;
   font-family: 'Sofia';
-  font-size: 56px;}
+  font-size: 56px;
+}
 
-  .searchTab{
-    color: black;
-    padding-top: 7%;
-    padding-left: 10%;
-    font-family: 'Sofia';
-    font-size: 42px;
-  }
+.searchTab{
+  color: black;
+  padding-top: 7%;
+  padding-left: 10%;
+  font-family: 'Sofia';
+  font-size: 42px;
+}
 
-  
+.faveTab{
+  color: white;
+  padding-top:7%;
+  padding-left: 2%;  
+  text-align: center;
+  font-family: 'Sofia';
+  font-size: 42px;
+}
+
+
+.names{
+  color: #27205c;
+}

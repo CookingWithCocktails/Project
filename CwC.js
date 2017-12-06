@@ -54,15 +54,6 @@ function SubmitRecipe() {
     var ingredients = $("#IngredientsInput").val();
     var type = $("#SelectRecipeType").val();
     var student =  $("#StudentSuitable").val();
-//---------------------------------------------------------------------------------
-
-
-
-
-
-
-//---------------------------------------------------------------------------------
-
 
     var RecipeData = {
         author: author,
@@ -87,9 +78,6 @@ function SubmitRecipe() {
 $(document).ready(function () {
     var database = firebase.database();
     var user = firebase.auth().currentUser;
-
-
-
     var index3 = 0;
     var index2 = 0;
     var ref = database.ref('Recipes/Food recipes /');
@@ -108,7 +96,7 @@ $(document).ready(function () {
                     $('#accordion').append(
                         `<div class="card">
                         <div class="card-header" role="tab" id="heading${index}">
-                            <h5 class="mb-0">
+                            <h5 class="mb-0 names">
                                 <a data-toggle="collapse" href="#collapse${index}" aria-expanded="true" aria-controls="collapse${index}">
                                       ${title}
                                 </a>
@@ -122,7 +110,7 @@ $(document).ready(function () {
                               ${method}
                             </div>
                             <div>
-                          <button id="${thisid}" onClick="reply_click(this.id)">Add to favourites</button>
+                          <button class="btn buto1" id="${thisid}" onClick="reply_click(this.id)">Add to favourites</button>
                             </div>
                         </div>
                     </div>`
@@ -161,7 +149,7 @@ $(document).ready(function () {
                                 ${method}
 
                               </div>
-                              <button id="${thisid}" onClick="reply_click(this.id)">Add to favourites</button>
+                              <button class="btn buto1" id="${thisid}" onClick="reply_click(this.id)">Add to favourites</button>
 
                           </div>
                       </div>`
@@ -197,7 +185,7 @@ $(document).ready(function () {
                                   <strong> Mixing method: </strong>
                                 ${method}
                               </div>
-                              <button id="${thisid}" onClick="reply_click2(this.id)">Add to favourites</button>
+                              <button class="btn buto1" id="${thisid}" onClick="reply_click2(this.id)">Add to favourites</button>
                           </div>
                       </div>`
                     );
