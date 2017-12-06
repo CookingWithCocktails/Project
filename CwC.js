@@ -254,6 +254,7 @@ $(document).ready(function () {
             .then(function (snapshot) {
                 ref.once("value", function (snapshot) {
                     snapshot.forEach(function (child) {
+                        thisid=child.key;
                         var ingredients = child.val().ingredients;
                         var method = child.val().method;
                         var title = child.val().title;
@@ -278,6 +279,7 @@ $(document).ready(function () {
                                    <strong> Mixing method: </strong>
                                  ${method}
                                </div>
+                               <button class="btn buto1" id="${thisid}" onClick="reply_click(this.id)">Add to favourites</button>
                            </div>
                        </div>`);
                         }
@@ -288,16 +290,17 @@ $(document).ready(function () {
                 });
             });
 
-        ref2.once("value")
+            ref2.once("value")
             .then(function (snapshot) {
                 ref2.once("value", function (snapshot) {
                     snapshot.forEach(function (child) {
+                        thisid=child.key;
                         var ingredients = child.val().ingredients;
                         var method = child.val().method;
                         var title = child.val().title;
-                        var searchResults = false;
                         var lookfor = new RegExp(searching, 'i');
                         if (title.match(lookfor) || ingredients.match(lookfor)) {
+                            searchResults = true;
                             index = index + 1;
                             console.log(title);
                             $('#searchthings').append(
@@ -316,9 +319,9 @@ $(document).ready(function () {
                                    <strong> Mixing method: </strong>
                                  ${method}
                                </div>
+                               <button class="btn buto1" id="${thisid}" onClick="reply_click(this.id)">Add to favourites</button>
                            </div>
-                       </div>`
-                            );
+                       </div>`);
                         }
                     });
                     if(!searchResults){
@@ -326,6 +329,7 @@ $(document).ready(function () {
                     }
                 });
             });
+
         $("#searchthings").empty();
         $("#thissearched").val('');
     });
