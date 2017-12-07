@@ -169,6 +169,7 @@ $(document).ready(function () {
                     index = index + 1;
                     index3 = index;
                     thisid=child.key;
+
                     $('#accordion2').append(
                         `<div class="card">
                           <div class="card-header" role="tab" id="heading${index3}">
@@ -203,7 +204,6 @@ $(document).ready(function () {
                     snapshot.forEach(function (child) {
                       if(user.uid==child.key){
                       child.forEach(function(childofchild){
-
                         var ingredients = childofchild.val().ingredients;
                         var method = childofchild.val().method;
                         var title = childofchild.val().title;
@@ -224,7 +224,10 @@ $(document).ready(function () {
                                <strong> Mixing method: </strong>
                              ${method}
                            </div>
+                           <button class="btn buto1" id="${title}" onClick="reply_click3(this.id)">Delete from favourites</button>
                        </div>
+                           </div>
+
                    </div>`);
                       });
                     }});
@@ -254,7 +257,7 @@ $(document).ready(function () {
             .then(function (snapshot) {
                 ref.once("value", function (snapshot) {
                     snapshot.forEach(function (child) {
-                        thisid=child.key;
+
                         var ingredients = child.val().ingredients;
                         var method = child.val().method;
                         var title = child.val().title;
@@ -262,7 +265,8 @@ $(document).ready(function () {
                         if (title.match(lookfor) || ingredients.match(lookfor)) {
                             searchResults = true;
                             index = index + 1;
-                            console.log(title);
+
+                            thisid=child.key;
                             $('#searchthings').append(
                                 `<div class="card">
                            <div class="card-header" role="tab" id="heading${index}">
@@ -291,7 +295,6 @@ $(document).ready(function () {
             .then(function (snapshot) {
                 ref2.once("value", function (snapshot) {
                     snapshot.forEach(function (child) {
-                        thisid=child.key;
                         var ingredients = child.val().ingredients;
                         var method = child.val().method;
                         var title = child.val().title;
@@ -299,6 +302,7 @@ $(document).ready(function () {
                         if (title.match(lookfor) || ingredients.match(lookfor)) {
                             searchResults = true;
                             index = index + 1;
+                              thisid=child.key;
                             console.log(title);
                             $('#searchthings').append(
                                 `<div class="card">
@@ -316,7 +320,7 @@ $(document).ready(function () {
                                    <strong> Mixing method: </strong>
                                  ${method}
                                </div>
-                               <button class="btn buto1" id="${thisid}" onClick="reply_click(this.id)">Add to favourites</button>
+                               <button class="btn buto1" id="${thisid}" onClick="reply_click2(this.id)">Add to favourites</button>
                            </div>
                        </div>`);
                         }
@@ -408,4 +412,40 @@ function reply_click2(clicked_id)
           });
       });
       }
+}
+
+function reply_click3(clicked_id)
+{
+alert(clicked_id);
+  var database=firebase.database();
+var ref = database.ref('Recipes/Favourites/');
+
+firebase.auth().onAuthStateChanged(function(user) {
+if (user) {
+ref.once("value")
+    .then(function (snapshot) {
+        ref.once("value", function (snapshot) {
+            snapshot.forEach(function (child) {
+              if(user.uid==child.key){
+              child.forEach(function(childofchild){
+                if(clicked_id==childofchild.val().title){
+              console.log(childofchild.key.toString());
+              location.reload();
+              
+
+            childofchild.ref.remove();
+            }
+              });
+            }});
+        });
+    });
+
+
+
+// User is signed in.
+} else {
+// No user is signed in.
+}
+});
+
 }
